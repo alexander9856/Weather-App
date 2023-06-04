@@ -1,10 +1,11 @@
 import './Main.css'
 import { CurrentWeather } from './CurrentWeather'
 
-export const Main = () => {
+export const Main = ({ data }) => {
     return (
         <main>
-            <CurrentWeather />
+            {data && <CurrentWeather data={data} />}
+
         </main>
     )
 }
