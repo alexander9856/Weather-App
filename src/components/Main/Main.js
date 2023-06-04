@@ -1,9 +1,10 @@
-import { WeatherDetails } from "./WeatherDetails"
+import './Main.css'
+import { CurrentWeather } from './CurrentWeather'
 
 export const Main = () => {
     return (
         <main>
-            <WeatherDetails />
+            <CurrentWeather />
         </main>
     )
 }

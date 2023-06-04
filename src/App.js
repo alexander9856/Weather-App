@@ -1,13 +1,17 @@
 import './App.css';
-import { Header } from './components/Header/Header';
+import { Search } from './components/Search/Search';
 import { Main } from './components/Main/Main';
 
 function App() {
+  const handleOnSearchChange = (searchData) => {
+    console.log(searchData)
+  }
   return (
-    <>
-      <Header />
+    <div className='container'>
+      <Search onSearchChange={handleOnSearchChange} />
       <Main />
-    </>
+    </div>
+
   );
 }
 
