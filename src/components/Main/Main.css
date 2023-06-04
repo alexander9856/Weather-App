@@ -135,7 +135,9 @@ i{
     margin:0 auto;
     border-bottom: 0.1px solid #fff;
 }
-
+.daily-details-flex-item:last-child{
+    border: 0;
+}
 .accordion{
     margin-top: 1rem;
 }
