@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    font-family: sans-serif;
+    padding: 1.5rem;
+    background-image: linear-gradient(to right, #8360c3, #2ebf91)
+}
