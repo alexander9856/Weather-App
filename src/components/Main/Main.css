@@ -130,7 +130,10 @@ i{
     display: flex;
     align-items: center;
     height: 30px;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 60%;
+    margin:0 auto;
+    border-bottom: 0.1px solid #fff;
 }
 
 .accordion{
