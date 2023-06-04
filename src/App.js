@@ -23,10 +23,11 @@ function App() {
         console.log(err.message)
       })
   }
+
   return (
     <div className='container'>
       <Search onSearchChange={handleOnSearchChange} />
-      <Main data={currentWeather} />
+      <Main weather={currentWeather} forecast={forecast} />
     </div>
 
   );

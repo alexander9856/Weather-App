@@ -48,6 +48,7 @@
 .details{
     width: 100%;
     padding-left: 20px;
+    margin-bottom: 15px;
 }
 
 .parameter-row{
@@ -68,4 +69,70 @@
 .parameter-label.detail{
     font-weight: 600;
     margin-bottom: 0.2rem;
+    padding: 0px 2px 2px 0;
+   border-bottom: 1px solid #fff;
+}
+
+.weather-day{
+   text-align: right;
+   margin-bottom: 0.5rem;
+}
+i{
+    margin-right: 0.5rem;
+}
+
+.title{
+    font-size: 23px;
+    font-weight: 700;
+    color: #fff;
+}
+.daily-item{
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    height: 40px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+.icon-small{
+    width: 40px;
+}
+.day{
+    color: #212121;
+    flex: 1 1;
+    font-weight: 600;
+    margin-left: 15px;
+}
+.description{
+    flex: 1 1;
+    margin-right: 15px;
+    text-align: right;
+}
+
+.min-max{
+    color: #757575;
+}
+.daily-item label{
+    cursor: pointer;
+}
+.daily-details-flex{
+    display: flex;
+    padding: 5px 15px;
+    color: #fff;
+    flex-direction: column;
+}
+
+.daily-details-flex-item{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: space-around;
+}
+
+.accordion{
+    margin-top: 1rem;
 }

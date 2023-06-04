@@ -1,11 +1,12 @@
 import './Main.css'
 import { CurrentWeather } from './CurrentWeather'
+import { Forecast } from './Forecast'
 
-export const Main = ({ data }) => {
+export const Main = ({ weather, forecast }) => {
     return (
         <main>
-            {data && <CurrentWeather data={data} />}
-
+            {weather && <CurrentWeather weather={weather} />}
+            {forecast && <Forecast forecast={forecast} />}
         </main>
     )
 }
