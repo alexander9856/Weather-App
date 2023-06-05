@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { WEATHER_API_URL, WEATHER_API_KEY, GEO_API_URL, geoApiOptions } from '../api'
 
 
@@ -10,6 +10,20 @@ export const Weather = ({ children }) => {
     const [forecast, setForecast] = useState(null);
     const [search, setSearch] = useState(null);
 
+    // Initially show Sofia weather when opening the App
+    useEffect(() => {
+        ((async () => {
+            const sofiaWeatherRes = await fetch(`${WEATHER_API_URL}/weather?lat=42.697886&lon=23.321726&appid=${WEATHER_API_KEY}&units=metric`);
+            const sofiaWeather = await sofiaWeatherRes.json();
+
+            const sofiaForecastRes = await fetch(`${WEATHER_API_URL}/forecast?lat=42.697886&lon=23.321726&appid=${WEATHER_API_KEY}&units=metric`);
+            const sofiaForecast = await sofiaForecastRes.json();
+
+            setWeather({ city: 'Sofia, BG', ...sofiaWeather })
+            setForecast({ city: 'Sofia, BG', ...sofiaForecast })
+        }))()
+    }, [])
+
     const onSearchChange = async (searchData) => {
         const [latitude, longitude] = searchData.value.split(' ');
         try {
@@ -18,7 +32,6 @@ export const Weather = ({ children }) => {
 
             const weatherData = await weatherRes.json();
             const forecastData = await forecasthRes.json();
-
             setWeather({ city: searchData.label, ...weatherData });
             setForecast({ city: searchData.label, ...forecastData })
         }

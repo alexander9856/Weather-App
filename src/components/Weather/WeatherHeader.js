@@ -1,4 +1,5 @@
 export const WeatherHeader = ({weather}) => {
+    console.log(weather)
     return (
         <div className="top">
             <div>
