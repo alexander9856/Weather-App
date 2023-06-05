@@ -1,13 +1,12 @@
-import './Main.css';
 import { useContext } from 'react';
 import { WeatherContext } from '../../contexts/WeatherContext';
-import { CurrentWeather } from './CurrentWeather';
-import { Forecast } from './Forecast';
+import { Weather } from '../Weather/Weather';
+import { Forecast } from '../Forecast/Forecast';
 export const Main = () => {
     const { weather, forecast } = useContext(WeatherContext)
     return (
         <main>
-            {weather && <CurrentWeather/>}
+            {weather && <Weather/>}
             {forecast && <Forecast />}
         </main>
     )

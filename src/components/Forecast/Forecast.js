@@ -1,3 +1,4 @@
+import './Forecast.css'
 import { Accordion } from 'react-accessible-accordion';
 import { calculator } from '../../helpers/calculator'
 import { ForecastItem } from './ForecastItem';

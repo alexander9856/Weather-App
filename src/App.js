@@ -1,18 +1,12 @@
 import './App.css';
-import { Search } from './components/Search/Search';
-import { Main } from './components/Main/Main';
+import { Home } from './components/Home/Home';
 import { Weather } from './contexts/WeatherContext'
 
 function App() {
-
   return (
-    <div className='container'>
-      <Weather>
-        <Search />
-        <Main />
-      </Weather>
-    </div>
-
+    <Weather>
+      <Home />
+    </Weather>
   );
 }
 
