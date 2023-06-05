@@ -2,7 +2,7 @@ export const backgroundChange = (weather) => {
     let description = weather.weather[0].description;
     const icon = weather.weather[0].icon;
     if (icon.includes('d')) {
-        document.body.classList.remove('night')
+        document.body.classList.toggle('night')
         description.includes('rain') ? document.body.className = 'rainy' : document.body.classList.remove('rainy');
         description === 'overcast clouds' ? document.body.className = 'overcast-clouds' : document.body.classList.remove('overcast-clouds');
         description === 'few clouds' ? document.body.className = 'few-clouds' : document.body.classList.remove('few-clouds');
@@ -13,6 +13,6 @@ export const backgroundChange = (weather) => {
         description.includes('wind') ? document.body.className = 'windy' : document.body.classList.remove('windy');
     }
     else {
-        document.body.className = 'night';
+        document.body.classList.toggle('night');
     }
 }
