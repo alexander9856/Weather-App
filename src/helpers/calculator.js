@@ -1,4 +1,4 @@
-export const weekDays = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', "Saturday" ];
+export const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', "Saturday"];
 
 const average = (sum, itemsCount) => {
     return Math.round(sum / itemsCount)
@@ -23,9 +23,23 @@ export const calculator = (data) => {
     const averageSeaLevel = average(sumSeaLevel, dayLight.length);
     const averageFeelsLike = average(sumFeelsLike, dayLight.length);
 
-    const iconIndex = Math.floor(dayLight.length / 2);
-    const icon = dayLight[iconIndex].weather[0].icon;
-    const date = dayLight[iconIndex].dt_txt
+    const middleIndex = Math.floor(dayLight.length / 2);
+
+    const icons = [];
+    dayLight.map(x => icons.push(x.weather[0].icon));
+
+    const occurancesCounts = {};
+    icons.map(x => occurancesCounts[x] = (occurancesCounts[x] || 0) + 1);
+
+    let arr = Object.values(occurancesCounts);
+    let max = Math.max(...arr);
+
+    let icon = ''
+    for (let i in occurancesCounts) {
+        if (max == occurancesCounts[i]) icon = i
+    }
+    
+    const date = dayLight[middleIndex].dt_txt
     const day = weekDays[new Date(date).getDay()];
     return {
         averageMaxDegrees,
