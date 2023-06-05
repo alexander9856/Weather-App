@@ -1,4 +1,4 @@
-const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', "Saturday", 'Sunday'];
+export const weekDays = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', "Saturday" ];
 
 const average = (sum, itemsCount) => {
     return Math.round(sum / itemsCount)
@@ -26,7 +26,7 @@ export const calculator = (data) => {
     const iconIndex = Math.floor(dayLight.length / 2);
     const icon = dayLight[iconIndex].weather[0].icon;
     const date = dayLight[iconIndex].dt_txt
-    const day = weekDays[new Date(date).getDay()]
+    const day = weekDays[new Date(date).getDay()];
     return {
         averageMaxDegrees,
         averageMinDegrees,

@@ -1,16 +1,9 @@
-export const CurrentWeather = ({ weather }) => {
-    const date = new Date().getDay()
-    const days = {
-        0: 'Sunday',
-        1: 'Monday',
-        2: 'Tuesday',
-        3: 'Wednesday',
-        4: 'Thursday',
-        5: 'Friday',
-        6: 'Saturday'
-    }
-    const day = days[date]
-
+import { weekDays } from '../../helpers/calculator';
+import { useContext } from 'react';
+import { WeatherContext } from '../../contexts/WeatherContext';
+export const CurrentWeather = () => {
+    const { weather } = useContext(WeatherContext);
+    const day = weekDays[new Date().getDay()];
     return (
         <div className="weather">
             <div className="top">
