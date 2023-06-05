@@ -68,3 +68,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.night{
+    background-image: url('./assets/cloudy-night-with-full-moon._.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+

@@ -1,4 +1,4 @@
-# 🌞React-Weather-App
+# 🌞Weather-App
 
 This is a weather app, which shows daily and 4 days ahead the weather about current city
 

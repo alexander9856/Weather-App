@@ -1,9 +1,13 @@
 import { AccordionItemPanel } from 'react-accessible-accordion';
-
+import { useContext } from 'react';
+import { WeatherContext } from '../../contexts/WeatherContext';
 export const ForecastItemInfo = ({ item }) => {
+    const { weather } = useContext(WeatherContext);
+    const isNight = weather.weather[0].icon.includes('n');
+    
     return (
         <AccordionItemPanel>
-            <div className='daily-details-flex'>
+            <div className={`daily-details-flex ${isNight && 'nighty'}`}>
                 <div className='daily-details-flex-item'>
                     <label> Pressure: </label>
                     <label> {item.averagePressure} hPa </label>
