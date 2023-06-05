@@ -9,18 +9,26 @@ export const Weather = ({ children }) => {
     const [weather, setWeather] = useState(null);
     const [forecast, setForecast] = useState(null);
     const [search, setSearch] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [fetchError, setFetchError] = useState(false)
 
     // Initially show Sofia weather when opening the App
     useEffect(() => {
         ((async () => {
-            const sofiaWeatherRes = await fetch(`${WEATHER_API_URL}/weather?lat=42.697886&lon=23.321726&appid=${WEATHER_API_KEY}&units=metric`);
-            const sofiaWeather = await sofiaWeatherRes.json();
+            try {
+                const sofiaWeatherRes = await fetch(`${WEATHER_API_URL}/weather?lat=42.697886&lon=23.321726&appid=${WEATHER_API_KEY}&units=metric`);
+                const sofiaWeather = await sofiaWeatherRes.json();
 
-            const sofiaForecastRes = await fetch(`${WEATHER_API_URL}/forecast?lat=42.697886&lon=23.321726&appid=${WEATHER_API_KEY}&units=metric`);
-            const sofiaForecast = await sofiaForecastRes.json();
+                const sofiaForecastRes = await fetch(`${WEATHER_API_URL}/forecast?lat=42.697886&lon=23.321726&appid=${WEATHER_API_KEY}&units=metric`);
+                const sofiaForecast = await sofiaForecastRes.json();
 
-            setWeather({ city: 'Sofia, BG', ...sofiaWeather })
-            setForecast({ city: 'Sofia, BG', ...sofiaForecast })
+                setWeather({ city: 'Sofia, BG', ...sofiaWeather })
+                setForecast({ city: 'Sofia, BG', ...sofiaForecast })
+            }
+            catch(err){
+                setFetchError(true)
+            }
+            setIsLoading(false)
         }))()
     }, [])
 
@@ -36,8 +44,9 @@ export const Weather = ({ children }) => {
             setForecast({ city: searchData.label, ...forecastData })
         }
         catch (err) {
-            console.log(err)
+            setFetchError(true)
         }
+        setIsLoading(false)
     }
     const handleOnChange = (searchValue) => {
         setSearch(searchValue);
@@ -60,14 +69,14 @@ export const Weather = ({ children }) => {
                 }
             }
             else {
-                console.log('Too many requests!');
+                setFetchError(true)
                 return {
                     options: []
                 }
             }
         }
         catch (err) {
-            console.log(err.message);
+            setFetchError(true)
         }
 
     }
@@ -77,7 +86,9 @@ export const Weather = ({ children }) => {
         onSearchChange,
         handleOnChange,
         loadOptions,
-        search
+        search,
+        isLoading,
+        fetchError,
     }
 
     return (

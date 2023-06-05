@@ -11,21 +11,21 @@
 }
 
 .reason {
-    color: rgb(152, 61, 64);
+    color: rgb(159, 25, 29);
     font-size: 30px;
     font-weight: 500;
 }
 
 #notFound a {
     margin-top: 2rem;
-    color: rgb(13, 85, 173);
+    color: #ffffff;
     text-decoration: none; 
     font-weight: 500;
     font-size: 24px;
 }
 
 #notFound a:hover {
-    color: rgb(17, 56, 104);
+    color: #5948ef
 }
 
 .fa-house{

@@ -1,0 +1,32 @@
+.err-wrapper {
+    text-align: center;
+    background-color: rgb(158, 158, 255);
+    border-radius: 5px;
+    width: 70%;
+    margin: 13rem auto 0 auto;
+    padding: 1rem;
+    box-shadow: 0 0 0.625rem #380176;
+
+}
+
+.err-msg {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+.err-btn {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    background-color: rgb(100, 87, 198);
+    cursor: pointer;
+    font-size: 16px;
+    font-family: sans-serif;
+    border: 2px solid rgb(122, 108, 227);
+    border-radius: 4px;
+
+}
+.err-btn:hover{
+    opacity: 80%;
+}
