@@ -12,11 +12,59 @@ body {
     background-color: #FFFFFF;
     font-family: sans-serif;
     padding: 1.5rem;
-    background-image: linear-gradient(to right, #61a0ba, #6d6dd0)
+    background-image: linear-gradient(to right, #61a0ba, #6d6dd0);
 }
 
-.container{
+.container {
     width: 50%;
     margin: 0 auto;
     margin-top: 1rem;
+}
+
+.rainy {
+    background-image: url('./assets/depositphotos_198812272-stock-illustration-rainy-sky-background-cartoon-style.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overcast-clouds {
+    background-image: url('./assets/inline_image_preview.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.scattered-clouds {
+    background-image: url('./assets/istockphoto-1200224188-170667a.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.few-clouds {
+    background-image: url('./assets/istockphoto-1200224188-170667a.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.broken-clouds {
+    background-image: url('./assets/broken_clouds_by_kevintheman_dax9bd4-fullview.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clear-sky {
+    background-image: url('./assets/istockphoto-947314334-612x612.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.snowy {
+    background-image: url('./assets/depositphotos_98723840-stock-photo-winter-background-with-snowy-weather.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.windy {
+    background-image: url('./assets/photo-1470176519524-3c2f481c8c9c.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

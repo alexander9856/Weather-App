@@ -47,6 +47,7 @@ i {
     cursor: pointer;
     font-size: 14px;
     padding: 5px 20px;
+    margin-top: 1rem;
 }
 
 .daily-item:hover { 
@@ -81,7 +82,7 @@ i {
 .daily-details-flex {
     display: flex;
     padding: 5px 15px;
-    color: #fff;
+    color: #201010;
     flex-direction: column;
 }
 
@@ -92,7 +93,7 @@ i {
     justify-content: space-between;
     width: 60%;
     margin: 0 auto;
-    border-bottom: 0.1px solid #fff;
+    border-bottom: 0.1px solid #201010;
 }
 
 .daily-details-flex-item:last-child {

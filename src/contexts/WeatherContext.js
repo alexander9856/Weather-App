@@ -11,7 +11,7 @@ export const Weather = ({ children }) => {
     const [search, setSearch] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [fetchError, setFetchError] = useState(false)
-
+    
     // Initially show Sofia weather when opening the App
     useEffect(() => {
         ((async () => {
