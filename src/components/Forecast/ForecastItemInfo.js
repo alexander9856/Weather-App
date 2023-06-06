@@ -7,28 +7,28 @@ export const ForecastItemInfo = ({ item }) => {
     
     return (
         <AccordionItemPanel>
-            <div className={`daily-details-flex ${isNight && 'nighty'}`}>
-                <div className='daily-details-flex-item'>
+            <div className='daily-details-flex'>
+                <div className={`daily-details-flex-item ${isNight && 'nighty'}`}>
                     <label> Pressure: </label>
                     <label> {item.averagePressure} hPa </label>
                 </div>
-                <div className='daily-details-flex-item'>
+                <div className={`daily-details-flex-item ${isNight && 'nighty'}`}>
                     <label> Humidity: </label>
                     <label> {item.averageHumidity}% </label>
                 </div>
-                <div className='daily-details-flex-item'>
+                <div className={`daily-details-flex-item ${isNight && 'nighty'}`}>
                     <label> Clouds: </label>
                     <label> {item.averageClouds}% </label>
                 </div>
-                <div className='daily-details-flex-item'>
+                <div className={`daily-details-flex-item ${isNight && 'nighty'}`}>
                     <label> Wind speed: </label>
                     <label> {item.averageWindSpeed} m/s </label>
                 </div>
-                <div className='daily-details-flex-item'>
+                <div className={`daily-details-flex-item ${isNight && 'nighty'}`}>
                     <label> Sea level: </label>
                     <label> {item.averageSeaLevel}m </label>
                 </div>
-                <div className='daily-details-flex-item'>
+                <div className={`daily-details-flex-item ${isNight && 'nighty'}`}>
                     <label>Feels like:</label>
                     <label> {item.averageFeelsLike}°C </label>
                 </div>
