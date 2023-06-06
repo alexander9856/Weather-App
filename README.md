@@ -18,6 +18,15 @@ This is a weather app, which shows daily and 4 days ahead the weather about curr
   - Changing background
 
 
+# 👀Screenshots
+
+<img src='Screenshots/broken_clouds.png'></img>
+<img src='Screenshots/clear_sky.png'></img>
+<img src='Screenshots/few_clouds.png'></img>
+<img src='Screenshots/night.png'></img>
+<img src='Screenshots/rain.png'></img>
+<img src='Screenshots/scattered_clouds.png'></img>
+<img src='Screenshots/accordeon.png'></img>
 
 # 🏆Feedback 
 
