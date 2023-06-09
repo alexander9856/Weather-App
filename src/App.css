@@ -15,7 +15,7 @@ body {
     background-image: linear-gradient(to right, #61a0ba, #6d6dd0);
 }
 
-.container {
+#container {
     width: 50%;
     margin: 0 auto;
     margin-top: 1rem;
@@ -63,8 +63,8 @@ body {
     background-repeat: no-repeat;
 }
 
-.windy {
-    background-image: url('./assets/photo-1470176519524-3c2f481c8c9c.jpg');
+.foggy{
+    background-image: url('./assets/464524.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -74,4 +74,3 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
-

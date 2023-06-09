@@ -50,7 +50,7 @@ i {
     margin-top: 1rem;
 }
 
-.daily-item:hover { 
+.daily-item:hover {
     opacity: 90%;
 }
 
@@ -91,22 +91,30 @@ i {
     align-items: center;
     height: 30px;
     justify-content: space-between;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
-    border-bottom: 0.1px solid #201010;
+    border-bottom: 1px solid #201010;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 0px 20px;
+}
+
+.daily-details-flex-item:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .daily-details-flex-item:last-child {
     border: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .accordion {
     margin-top: 1rem;
 }
 
-.nighty{
-    color:#fff;
+.nighty {
+    color: #fff;
     border-bottom: 1px solid #fff;
 }
-
-
